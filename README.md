@@ -3,6 +3,11 @@ including my configuration and patches I use.
 
 Running `build.sh` resets the repository, applies the patches and builds dwm.
 
+Build an install an Arch Linux package like this:
+```sh
+makepkg -sif PKGBUILD
+```
+
 Used patches:
 
 * [fancybar](https://dwm.suckless.org/patches/fancybar/)

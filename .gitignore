@@ -1,3 +1,6 @@
 *.o
 dwm
 *.orig
+*.tar.xz
+src
+pkg
