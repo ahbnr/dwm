@@ -8,7 +8,7 @@
 # and  http://ix.io/2cCr
 
 echo 'Cleaning up sources...'
-#git reset --hard
+git reset --hard
 
 echo 'Applying patches...'
 for patch in patches/*.diff; do
