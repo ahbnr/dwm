@@ -7,7 +7,7 @@ url="https://dwm.suckless.org/"
 license=('MIT')
 provides=('dwm')
 conflicts=('dwm')
-depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st' 'dmenu' 'playerctl' 'pulsemixer' 'slock' 'light' 'nerd-fonts-hack')
+depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st' 'dmenu' 'playerctl' 'pulsemixer' 'slock' 'light' 'nerd-fonts-hack' 'dmenu_webandwm')
 
 prepare() {
   cp -R $startdir/* $srcdir || true

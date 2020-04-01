@@ -7,6 +7,7 @@ Build an install an Arch Linux package like this:
 ```sh
 makepkg -sif PKGBUILD
 ```
+([dmenu_webandwm](https://github.com/ahbnr/dmenu_webandwm) must also be installed for this to work)
 
 Used patches:
 

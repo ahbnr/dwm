@@ -68,7 +68,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dmenucmd[] = { "/home/anton/.local/bin/dmenu_launcher", "-m", dmenumon, "-fn", dmenufont, "-nb", gruvbox_dark0_soft, "-nf", gruvbox_light1, "-sb", gruvbox_neutral_orange, "-sf", gruvbox_light0_soft, NULL };
+static const char *dmenucmd[] = { "dmenu_webandwm", "-m", dmenumon, "-fn", dmenufont, "-nb", gruvbox_dark0_soft, "-nf", gruvbox_light1, "-sb", gruvbox_neutral_orange, "-sf", gruvbox_light0_soft, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *brighter[]  = { "light", "-A", "5", NULL };
 static const char *dimmer[]  = { "light", "-U", "5", NULL };
