@@ -6,6 +6,7 @@ arch=('x86_64')
 url="https://dwm.suckless.org/"
 license=('MIT')
 provides=('dwm')
+conflicts=('dwm')
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'st' 'dmenu' 'playerctl' 'pulsemixer' 'slock' 'light' 'nerd-fonts-hack')
 
 prepare() {
