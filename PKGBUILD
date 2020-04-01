@@ -1,5 +1,5 @@
 pkgname=dwm-custom
-pkgver=r1682.03d6389
+pkgver=r1686.8f39f4e
 pkgrel=1
 pkgdesc="dwm - customized version of the dynamic window manager"
 arch=('x86_64')
