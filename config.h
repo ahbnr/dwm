@@ -85,7 +85,7 @@ static const char *playerctlPlayPause[] = {"playerctl", "play-pause", NULL};
 
 static const char *lowerVolume[] = {"pulsemixer", "--change-volume", "-5", NULL};
 static const char *raiseVolume[] = {"pulsemixer", "--change-volume", "+5", NULL};
-static const char *audioMute[] = {"pulsemixer", "toggle-mute", NULL};
+static const char *audioMute[] = {"pulsemixer", "--toggle-mute", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
