@@ -32,14 +32,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class         instance title                          tags mask isfloating monitor */
-	{ "Gimp",        NULL,    NULL,                          1 << 5,   0,         -1 },
-	{ "Inkscape",    NULL,    NULL,                          1 << 5,   0,         -1 },
-	{ "firefox",     NULL,    NULL,                          1,        0,         -1 },
-	{ "qpdfview",    NULL,    NULL,                          1 << 3,   0,         -1 },
-	{ "KeePassXC",   NULL,    NULL,                          1 << 8,   0,         -1 },
-	{ "KeePassXC",   NULL,    "Unlock Database - KeePassXC", 0,        1,         -1 },
-	{ "filemanager", NULL,    NULL,                          1 << 6,   0,         -1 },
+	/* class         instance title                          tags mask switchtotag isfloating monitor */
+	{ "Gimp",        NULL,    NULL,                          1 << 5,   1,          0,         -1 },
+	{ "Inkscape",    NULL,    NULL,                          1 << 5,   1,          0,         -1 },
+	{ "firefox",     NULL,    NULL,                          1,        1,          0,         -1 },
+	{ "qpdfview",    NULL,    NULL,                          1 << 3,   1,          0,         -1 },
+	{ "KeePassXC",   NULL,    NULL,                          1 << 8,   1,          0,         -1 },
+	{ "KeePassXC",   NULL,    "Unlock Database - KeePassXC", 0,        0,          1,         -1 },
+	{ "filemanager", NULL,    NULL,                          1 << 6,   1,          0,         -1 },
 };
 
 /* layout(s) */
@@ -72,7 +72,7 @@ static const char *dmenucmd[] = { "dmenu_webandwm", "-m", dmenumon, "-fn", dmenu
 static const char *termcmd[]  = { "st", NULL };
 static const char *brighter[]  = { "light", "-A", "5", NULL };
 static const char *dimmer[]  = { "light", "-U", "5", NULL };
-static const char *lock[]  = { "slock", "systemctl", "suspend", "-i", NULL };
+static const char *suspend[]  = { "systemctl", "suspend", NULL };
 static const char *shutdown[]  = { "systemctl", "poweroff", NULL };
 static const char *fileManager[]  = { "st", "-t", "ranger", "-c", "filemanager", "-e", "zsh", "-c", "ranger", NULL };
 //static const char *fileManager[]  = { "st", "-e", "zsh -c br", NULL };
@@ -94,7 +94,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_plus,   spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_minus,  spawn,          {.v = dimmer } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = lock } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = suspend } },
 	{ MODKEY|ShiftMask|ControlMask, XK_q,      spawn,          {.v = shutdown } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = fileManager } },
   // playerctl - controlling mpsyt etc.
