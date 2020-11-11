@@ -74,7 +74,7 @@ static const char *brighter[]  = { "light", "-A", "5", NULL };
 static const char *dimmer[]  = { "light", "-U", "5", NULL };
 static const char *lock[]  = { "slock", "systemctl", "suspend", "-i", NULL };
 static const char *shutdown[]  = { "systemctl", "poweroff", NULL };
-static const char *fileManager[]  = { "st", "-t", "lf", "-c", "filemanager", "-e", "zsh", "-c", "lf", NULL };
+static const char *fileManager[]  = { "st", "-t", "ranger", "-c", "filemanager", "-e", "zsh", "-c", "ranger", NULL };
 //static const char *fileManager[]  = { "st", "-e", "zsh -c br", NULL };
 
 static const char *playerctlNext[] = {"playerctl", "next", NULL};
@@ -85,7 +85,8 @@ static const char *playerctlPlayPause[] = {"playerctl", "play-pause", NULL};
 
 static const char *lowerVolume[] = {"pulsemixer", "--change-volume", "-5", NULL};
 static const char *raiseVolume[] = {"pulsemixer", "--change-volume", "+5", NULL};
-static const char *audioMute[] = {"pulsemixer", "--toggle-mute", NULL};
+static const char *speakerMute[] = {"pulsemixer", "--toggle-mute", NULL};
+static const char *micMute[] = {"pulsemixer", "--id", "source-1", "--toggle-mute", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -104,7 +105,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  spawn,          {.v = playerctlPlayPause } },
 	{ 0,              XF86XK_AudioLowerVolume, spawn,          {.v = lowerVolume } },
 	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = raiseVolume } },
-	{ 0,              XF86XK_AudioMute,        spawn,          {.v = audioMute } },
+	{ 0,              XF86XK_AudioMute,        spawn,          {.v = speakerMute } },
+	{ 0,              XF86XK_AudioMicMute,     spawn,          {.v = micMute } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
