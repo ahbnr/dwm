@@ -40,6 +40,7 @@ static const Rule rules[] = {
 	{ "KeePassXC",   NULL,    NULL,                          1 << 8,   1,          0,         -1 },
 	{ "KeePassXC",   NULL,    "Unlock Database - KeePassXC", 0,        0,          1,         -1 },
 	{ "filemanager", NULL,    NULL,                          1 << 6,   1,          0,         -1 },
+	{ "mpv",         NULL,    NULL,                          1 << 4,   1,          0,         -1 },
 };
 
 /* layout(s) */
